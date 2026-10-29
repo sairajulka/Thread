@@ -2,6 +2,40 @@
 <html lang = "en">
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1, viewport-fit=cover"
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Thread</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+<body>
+    <main>
+        <h1>Thread</h1>
+        <p class = "sub">Turn a dense text into a map of claims, people, concepts and evidence, with every link traced directly to its passage</p>
+        <details id="inp" open class="card">
+            <summary style="cursor:pointer;font-weight:600">Source text</summary>
+            <textarea id="ta" placeholder="Paste an article, set of documents, or any dense text you can't seem to grasp"></textarea>
+            <div class="row">
+                <button class="p" id="go">Build map</button>
+                <button id="ex">Load example</button>
+                <span id="msg"></span>
+            </div>
+        </details>
+
+        <div class="grid" id="out" hidden>
+            <div class="card">
+                <div class="legend" id="lg"></div>
+                <svg id="svg" viewBox="0 0 800 520" role="img" aria-label="Knowledge graph"></svg>
+                <div class="row"><span id="stats" class="k"></span><button id="uns">Show unsupported claims</button></div>
+            </div>
+            <div class="side">
+                <div class="side">
+                    <div class="card" id="det"><span class="k">Select a node or link</span></div>
+                    <div class="card"><div class="k" style="margin-bottom:6px">Origional Text</div><div id="src"></div></div>
+            </div>
+        </div>
+        </main>
+
+        <script src="app.js"></script>
+
+</body>
 </html>
