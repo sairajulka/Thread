@@ -42,3 +42,31 @@
 
     color-scheme: dark;
 }
+
+html{
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    scroll-padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--tx);
+    font:15px/1.6 system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    max-width:1120px;
+    margin:0 auto;
+    padding:36px 20px 56px;
+}
+
+h1{
+    margin:0;
+    font:600 22px/1.2 system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+}
